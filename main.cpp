@@ -1,7 +1,17 @@
-#include <stdio.h>
+#include <bit/stdc++.h>
+#define INF 1e9
+using namespace std;
 
-int main()
+typedef long long ll;
+
+int mp[MAX_N][MAX_N];
+ll G[MAX_N][MAX_N];
+
+struct Point
 {
-    printf("Hello World");
-    return 0;
+	int x,y;
+	ll cost;
+	bool operator < (const Point &a) const{
+		return cost<a.cost;
+	}
 }
